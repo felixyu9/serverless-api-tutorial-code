@@ -47,7 +47,7 @@ async function getProduct(productId) {
   return await dynamodb.get(params).promise().then((response) => {
     return buildResponse(200, response.Item);
   }, (error) => {
-    console.error('Do your custome error handling here. I am just gonna log it: ', error);
+    console.error('Do your custom error handling here. I am just gonna log it: ', error);
   });
 }
 
@@ -72,7 +72,7 @@ async function scanDynamoRecords(scanParams, itemArray) {
     }
     return itemArray;
   } catch(error) {
-    console.error('Do your custome error handling here. I am just gonna log it: ', error);
+    console.error('Do your custom error handling here. I am just gonna log it: ', error);
   }
 }
 
@@ -89,7 +89,7 @@ async function saveProduct(requestBody) {
     }
     return buildResponse(200, body);
   }, (error) => {
-    console.error('Do your custome error handling here. I am just gonna log it: ', error);
+    console.error('Do your custom error handling here. I am just gonna log it: ', error);
   })
 }
 
@@ -113,7 +113,7 @@ async function modifyProduct(productId, updateKey, updateValue) {
     }
     return buildResponse(200, body);
   }, (error) => {
-    console.error('Do your custome error handling here. I am just gonna log it: ', error);
+    console.error('Do your custom error handling here. I am just gonna log it: ', error);
   })
 }
 
@@ -133,7 +133,7 @@ async function deleteProduct(productId) {
     }
     return buildResponse(200, body);
   }, (error) => {
-    console.error('Do your custome error handling here. I am just gonna log it: ', error);
+    console.error('Do your custom error handling here. I am just gonna log it: ', error);
   })
 }
 
